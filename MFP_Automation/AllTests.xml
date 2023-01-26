@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "Matchfit Pass Testing Suite">
+    <test name = "Matchfit Pass Web Test Suite"  thread-count="2">
+        <classes>
+            <class name = "UI.Web.AdminDashboardTests" />
+            <class name = "UI.Web.TestingDashboardTests" />
+            <class name = "UI.Web.VEntryTests" />
+            <class name = "UI.Web.HostingDashboardTests" />
+            <class name = "UI.Web.VaccineDashboardTests" />
+        </classes>
+    </test>
+    <test name = "Matchfit Pass Mobile Test Suite"  thread-count="2">
+        <classes>
+            <class name = "UI.Mobile.MFPTests" />
+        </classes>
+    </test>
+</suite>
