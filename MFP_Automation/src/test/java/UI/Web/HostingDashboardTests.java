@@ -28,7 +28,7 @@ public class HostingDashboardTests extends BaseTest {
     }
 
     @Test(description = "TC001_Host Login")
-    @Description("To verify that the user can login successfully")
+    @Description("To verify that the user can login successfully test")
     @TmsLink("MFPA-573")
     public void MFPA_573() {
         login.validateLoginPageObjects();
