@@ -12,9 +12,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import static Helpers.APIHelper.*;
-import static io.restassured.RestAssured.get;
-
 
 public class APITests {
 

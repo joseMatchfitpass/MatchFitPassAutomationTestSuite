@@ -85,7 +85,7 @@ public class Base {
         caps.setCapability("platformVersion", props.getProperty("osVersion"));
         caps.setCapability("deviceName", props.getProperty("avdName"));
         caps.setCapability("automationName", "uiautomator2");
-        caps.setCapability("app", "C:\\Users\\Public\\Documents\\AUTOMATION\\MFP_Automation\\MFP_Automation\\src\\test\\resources\\app-v1.15.0.94-matchfit-stageRelease.apk");
+        caps.setCapability("app", "C:\\Users\\Public\\Documents\\AUTOMATION\\MFP_Automation\\MFP_Automation\\src\\test\\resources\\apk\\app-v1.15.0.94-matchfit-stageRelease.apk");
         try {
             mobileDriver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), caps);
             System.out.println(mobileDriver.getStatus());
