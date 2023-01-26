@@ -1,7 +1,6 @@
 package UI.Web;
 
 import Base.BaseTest;
-import Pages.Enums.Tabs;
 import io.qameta.allure.Description;
 import io.qameta.allure.TmsLink;
 import org.testng.Assert;
@@ -12,7 +11,6 @@ import org.testng.annotations.Test;
 
 import static Pages.Enums.SideBarMenu.TRACKING;
 import static Pages.Enums.StageURL.HOST_DASHBOARD;
-import static Pages.Enums.StageURL.V_ENTRY;
 
 public class HostingDashboardTests extends BaseTest {
 
@@ -20,15 +18,14 @@ public class HostingDashboardTests extends BaseTest {
     public void classSetup() {
         if (driver != null) {
             login.closeAlert();
-        }
-        else {
+        } else {
             webDriverSetup();
         }
         driver.get(HOST_DASHBOARD.getUrl());
     }
 
     @Test(description = "TC001_Host Login")
-    @Description("To verify that the user can login successfully test")
+    @Description("To verify that the user can login successfully")
     @TmsLink("MFPA-573")
     public void MFPA_573() {
         login.validateLoginPageObjects();
@@ -43,14 +40,14 @@ public class HostingDashboardTests extends BaseTest {
         login.validateLoginPageObjects();
         login.performLogin(loginData);
         dashboard.clickNavMenu(TRACKING);
-        Assert.assertEquals(dashboard.getPageHeaderText(TRACKING),TRACKING.getTitle());
+        Assert.assertEquals(dashboard.getPageHeaderText(TRACKING), TRACKING.getTitle());
     }
 
     @AfterMethod
-    public void afterMethodCleanup()
-    {
+    public void afterMethodCleanup() {
         dashboard.clickLogout();
     }
+
     @AfterClass
     public void cleanup() {
         if (driver != null) {
