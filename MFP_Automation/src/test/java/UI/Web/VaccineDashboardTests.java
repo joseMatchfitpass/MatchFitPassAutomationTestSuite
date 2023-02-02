@@ -9,8 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static Pages.Enums.SideBarMenu.TRACKING;
-import static Pages.Enums.SideBarMenu.VIEW_VACCINE_BATCHES;
+import static Pages.Enums.SideBarMenu.*;
 import static Pages.Enums.StageURL.HOST_DASHBOARD;
 import static Pages.Enums.StageURL.VACCINE_DASHBOARD;
 
@@ -34,7 +33,7 @@ public class VaccineDashboardTests extends BaseTest {
         Data.LogIn loginData = new Data.LogIn("+639176254815", "Password123@");
         login.validateLoginPageObjects();
         login.performLogin(loginData);
-        Assert.assertEquals(dashboard.getPageHeaderText(VIEW_VACCINE_BATCHES),VIEW_VACCINE_BATCHES.getTitle());
+        Assert.assertEquals(dashboard.getPageHeaderText(REGISTERED_VACCINES),REGISTERED_VACCINES.getTitle());
     }
     @Test(description = "TC001_Vaccine Login")
     @Description("To verify that the user can login successfully")
@@ -43,7 +42,7 @@ public class VaccineDashboardTests extends BaseTest {
         Data.LogIn loginData = new Data.LogIn("+639176254815", "Password123@");
         login.validateLoginPageObjects();
         login.performLogin(loginData);
-        Assert.assertEquals(dashboard.getPageHeaderText(VIEW_VACCINE_BATCHES),VIEW_VACCINE_BATCHES.getTitle());
+        Assert.assertEquals(dashboard.getPageHeaderText(REGISTERED_VACCINES),REGISTERED_VACCINES.getTitle());
     }
 
     @AfterMethod

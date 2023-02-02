@@ -19,7 +19,8 @@ public enum SideBarMenu {
     COMPANY_DETAILS("Company Details","/details"),
     TEAM_MANAGEMENT("Team Management","/management"),
     VIEW_VACCINE_BATCHES("View Vaccine Batches","/ViewVaccineBatches"),
-    INVOICE("Invoice","/invoice");
+    INVOICE("Invoice","/invoice"),
+    REGISTERED_VACCINES("Registered Vaccines","/registered-vaccines");
 
 
     SideBarMenu() {

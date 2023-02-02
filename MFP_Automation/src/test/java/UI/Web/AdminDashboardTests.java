@@ -46,8 +46,8 @@ public class AdminDashboardTests extends BaseTest {
 
     @Test(description = "TC0006_Admin Login")
     @Description("Verify the ability to show Password text")
-    @TmsLink("MFPA-890")
-    public void MFPA_890() {
+    @TmsLink("MFP-890")
+    public void MFP_890() {
         Data.LogIn loginData = new Data.LogIn("+639176254816", "Password123@!");
         login.validateLoginPageObjects();
         login.validateShowPassword(loginData);
