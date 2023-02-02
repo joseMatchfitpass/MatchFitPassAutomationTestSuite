@@ -81,6 +81,21 @@ public class AdminDashboardTests extends BaseTest {
         dashboard.validateDashboardPage();
         dashboard.clickTab(Tabs.FOR_ADMIN_VERIFICATION);
     }
+    @Test(description = "TC0001_Admin Login")
+    @Description("Verify that the user can login successfully")
+    @TmsLink("MFPA-577")
+    public void MFPA_577() {
+        Data.LogIn loginData = new Data.LogIn("+639176254815", "Password123@");
+        login.validateLoginPageObjects();
+        login.performLogin(loginData);
+        Assert.assertNull(login.getAlertText());
+        login.setAuthCode();
+        login.clickOtpContinueButton();
+        dashboard.validateDashboardPage();
+        dashboard.clickNavMenu(USER_CODES);
+        Assert.assertEquals(dashboard.getPageHeaderText(USER_CODES), USER_CODES.getTitle());
+    }
+
 
     @AfterClass
     public void cleanup() {
